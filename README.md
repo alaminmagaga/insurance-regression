@@ -1,1 +1,1 @@
-# insurance-regression
+# titanic-web-app

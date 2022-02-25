@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+  <link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+ <style type="text/css">
+    
+ 
+  </style>
+</head>
+
+<body>
+
+<div class='w3-padding w3-teal w3-center'><h1>insurance model</h1></div>
+  
+  
+   <form class="w3-container w3-card-2" action="{{ url_for('predict')}}" method="POST" style="width: 100%">
+  <h2 class="w3-text-blue w3-center w3-text-teal" >Input Form</h2>
+  <p>      
+  <label class="w3-text-teal"><b>age</b></label>
+  <input id="id1" class="w3-input w3-border" name="age"  required="required" type="number"></p>
+  <p>
+  <label class="w3-text-teal"><b>sex</b></label>
+        <select name="sex"  class="w3-select w3-border w3-round-large"  style="width:40%">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select><br>
+  <label class="w3-text-teal"><b>bmi</b></label>
+  <input id="id1" class="w3-input w3-border" name="bmi"  type="number" required="required"></p>
+ <label class="w3-text-teal"><b>children</b></label>
+  <input id="id1" class="w3-input w3-border" name="children"  type="number" required="required"></p>
+  <label class="w3-text-teal"><b>smoker</b></label>
+ <select name="smoker"  class="w3-select w3-border w3-round-large"  style="width:40%">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+  <p>      
+  <label class="w3-text-teal"><b>region</b></label>
+  <input id="id1" class="w3-input w3-border" name="region"  type="number" required="required"></p>
+  
+  <button onclick="myFunction()" type="submit" class="btn btn-primary btn-block btn-large w3-text-teal w3-border-teal" style="width:100%;">Predict</button> 
+   <br></form>
+   
+   
+</body>
+</html>
